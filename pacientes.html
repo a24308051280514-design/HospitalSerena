@@ -17,13 +17,13 @@
         nav a { text-decoration: none; color: var(--azul-primario); font-weight: 600; font-size: 15px; }
         nav a:hover, nav a.active { color: var(--blanco); }
 
-        .cuerpo { flex: 1; max-width: 1300px; width: 100%; margin: 140px auto 40px auto; padding: 0 20px; }
+        .cuerpo { flex: 1; max-width: 1400px; width: 100%; margin: 140px auto 40px auto; padding: 0 20px; }
         .document-section { background-color: var(--blanco); padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; }
         .document-section h2 { color: var(--azul-primario); margin-bottom: 10px; }
         .document-section p { color: #70757a; margin-bottom: 25px; }
 
         .table-responsive { overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; border: 1px solid #e9ecef; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; border: 1px solid #e9ecef; white-space: nowrap; }
         th, td { padding: 14px 18px; border-bottom: 1px solid #e9ecef; }
         th { background-color: var(--azul-claro); color: var(--azul-primario); font-weight: 600; border-bottom: 2px solid #cbd5e1; }
         tr:hover { background-color: #fdfefe; }
@@ -65,8 +65,11 @@
                             <th>id_pacientes</th>
                             <th>Nombre Completo</th>
                             <th>Edad</th>
+                            <th>Género</th>
                             <th>RFC</th>
                             <th>Sangre</th>
+                            <th>Dirección</th>
+                            <th>Correo Electrónico</th>
                             <th>Seguro Médico</th>
                             <th>Habitación</th>
                             <th>Diagnóstico</th>
@@ -75,16 +78,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="id-sector">PAC_01</td><td>Elena Rostova</td><td>34</td><td class="rfc-sector">ROSE7</td><td>O+</td><td>Seguros AlfaSalud</td><td>102-A</td><td>Post-operatorio controlado</td><td>Sí</td><td>Alta Próxima</td></tr>
-                        <tr><td class="id-sector">PAC_02</td><td>Julián Andrés Gómez</td><td>45</td><td class="rfc-sector">GOMJ9</td><td>A-</td><td>SuraMédica Global</td><td>205</td><td>Evaluación cardiológica</td><td>No</td><td>En Observación</td></tr>
-                        <tr><td class="id-sector">PAC_03</td><td>Sofía Milena Vignolo</td><td>29</td><td class="rfc-sector">VIGS2</td><td>B+</td><td>Asistencia VidaPlus</td><td>104</td><td>Tratamiento de Neumonía</td><td>Sí</td><td>En Observación</td></tr>
-                        <tr><td class="id-sector">PAC_04</td><td>Marcus Vance</td><td>62</td><td class="rfc-sector">VANM6</td><td>AB+</td><td>Seguros AlfaSalud</td><td>UCI-02</td><td>Monitoreo post-infarto</td><td>Sí</td><td>Crítico Estable</td></tr>
-                        <tr><td class="id-sector">PAC_05</td><td>Clara Inés Luz</td><td>71</td><td class="rfc-sector">LUZC1</td><td>O-</td><td>MediCare Total</td><td>108-B</td><td>Recuperación de fractura de cadera</td><td>No</td><td>Alta Próxima</td></tr>
-                        <tr><td class="id-sector">PAC_06</td><td>Mateo Riardo flores</td><td>12</td><td class="rfc-sector">RICM3</td><td>O+</td><td>Asistencia VidaPlus</td><td>Pediatría-3</td><td>Apendicitis aguda post-op</td><td>No</td><td>En Observación</td></tr>
-                        <tr><td class="id-sector">PAC_07</td><td>Diana Fuentes</td><td>38</td><td class="rfc-sector">LEED4</td><td>A+</td><td>SuraMédica Global</td><td>Maternidad-1</td><td>Monitoreo pre-parto</td><td>Sí</td><td>En Observación</td></tr>
-                        <tr><td class="id-sector">PAC_08</td><td>Lucas Samuel Silva</td><td>55</td><td class="rfc-sector">SILL8</td><td>B-</td><td>MediCare Total</td><td>201</td><td>Tratamiento de diabetes tipo II</td><td>Sí</td><td>Alta Próxima</td></tr>
-                        <tr><td class="id-sector">PAC_09</td><td>Beatriz Elena Peña</td><td>67</td><td class="rfc-sector">PEÑB5</td><td>O+</td><td>Seguros AlfaSalud</td><td>UCI-05</td><td>Insuficiencia respiratoria</td><td>No</td><td>Crítico Estable</td></tr>
-                        <tr><td class="id-sector">PAC_10</td><td>Tomás Navarro Soler</td><td>41</td><td class="rfc-sector">NAVT2</td><td>AB-</td><td>SuraMédica Global</td><td>110</td><td>Migraña crónica en estudio</td><td>Sí</td><td>Alta Próxima</td></tr>
+                        <tr><td class="id-sector">PAC_01</td><td>Elena Rostova</td><td>34</td><td>Femenino</td><td class="rfc-sector">ROSE7</td><td>O+</td><td>Av. de la Paz 452</td><td>elena.rostova@mail.com</td><td>Seguros AlfaSalud</td><td>102-A</td><td>Post-operatorio controlado</td><td>Sí</td><td>Alta Próxima</td></tr>
+                        <tr><td class="id-sector">PAC_02</td><td>Julián Andrés Gómez</td><td>45</td><td>Masculino</td><td class="rfc-sector">GOMJ9</td><td>A-</td><td>Calle Paseo Olivos 12</td><td>julian.gomez@mail.com</td><td>SuraMédica Global</td><td>205</td><td>Evaluación cardiológica</td><td>No</td><td>En Observación</td></tr>
+                        <tr><td class="id-sector">PAC_03</td><td>Sofía Milena Vignolo</td><td>29</td><td>Femenino</td><td class="rfc-sector">VIGS2</td><td>B+</td><td>Blvd. Independencia 890</td><td>sofia.vignolo@mail.com</td><td>Asistencia VidaPlus</td><td>104</td><td>Tratamiento de Neumonía</td><td>Sí</td><td>En Observación</td></tr>
+                        <tr><td class="id-sector">PAC_04</td><td>Marcus Vance</td><td>62</td><td>Masculino</td><td class="rfc-sector">VANM6</td><td>AB+</td><td>Calle Nogales 74</td><td>marcus.vance@mail.com</td><td>Seguros AlfaSalud</td><td>UCI-02</td><td>Monitoreo post-infarto</td><td>Sí</td><td>Crítico Estable</td></tr>
+                        <tr><td class="id-sector">PAC_05</td><td>Clara Inés Luz</td><td>71</td><td>Femenino</td><td class="rfc-sector">LUZC1</td><td>O-</td><td>Av. de los Insurgentes 105</td><td>clara.luz@mail.com</td><td>MediCare Total</td><td>108-B</td><td>Recuperación de fractura de cadera</td><td>No</td><td>Alta Próxima</td></tr>
+                        <tr><td class="id-sector">PAC_06</td><td>Mateo Ricardo Flores</td><td>12</td><td>Masculino</td><td class="rfc-sector">RICM3</td><td>O+</td><td>Calle del Sol 234</td><td>tutor.ricci@mail.com</td><td>Asistencia VidaPlus</td><td>Pediatría-3</td><td>Apendicitis aguda post-op</td><td>No</td><td>En Observación</td></tr>
+                        <tr><td class="id-sector">PAC_07</td><td>Diana Fuentes</td><td>38</td><td>Femenino</td><td class="rfc-sector">LEED4</td><td>A+</td><td>Av. de las Américas 78</td><td>diana.prince@mail.com</td><td>SuraMédica Global</td><td>Maternidad-1</td><td>Monitoreo pre-parto</td><td>Sí</td><td>En Observación</td></tr>
+                        <tr><td class="id-sector">PAC_08</td><td>Lucas Samuel Silva</td><td>55</td><td>Masculino</td><td class="rfc-sector">SILL8</td><td>B-</td><td>Privada del Roble 51</td><td>lucas.silva@mail.com</td><td>MediCare Total</td><td>201</td><td>Tratamiento de diabetes tipo II</td><td>Sí</td><td>Alta Próxima</td></tr>
+                        <tr><td class="id-sector">PAC_09</td><td>Beatriz Elena Peña</td><td>67</td><td>Femenino</td><td class="rfc-sector">PEÑB5</td><td>O+</td><td>Calle Reforma 312</td><td>beatriz.pena@mail.com</td><td>Seguros AlfaSalud</td><td>UCI-05</td><td>Insuficiencia respiratoria</td><td>No</td><td>Crítico Estable</td></tr>
+                        <tr><td class="id-sector">PAC_10</td><td>Tomás Navarro Soler</td><td>41</td><td>Masculino</td><td class="rfc-sector">NAVT2</td><td>AB-</td><td>Calle de la Fuente 99</td><td>tomas.navarro@mail.com</td><td>SuraMédica Global</td><td>110</td><td>Migraña crónica en estudio</td><td>Sí</td><td>Alta Próxima</td></tr>
                     </tbody>
                 </table>
             </div>
