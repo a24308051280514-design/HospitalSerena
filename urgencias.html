@@ -29,10 +29,6 @@
         tr:hover { background-color: #fdfefe; }
         
         .id-sector { font-family: 'Courier New', monospace; color: #1e4d6b; font-weight: bold; font-size: 14px; }
-        .triage { padding: 6px 12px; font-size: 12px; font-weight: 600; border: 1px solid rgba(0,0,0,0.05); display: inline-block; color: #fff; }
-        .triage-rojo { background-color: #d90429; }
-        .triage-naranja { background-color: #f77f00; }
-        .triage-amarillo { background-color: #fcbf49; color: #000; }
         
         footer { background-color: var(--azul-primario); color: var(--blanco); padding: 40px 20px; font-size: 15px; width: 100%; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 15px; }
@@ -59,8 +55,8 @@
 
     <main class="cuerpo">
         <section class="document-section">
-            <h2>Módulo de Urgencias</h2>
-            <p>Monitoreo de pacientes ingresados de emergencias clasificados por gravedad.</p>
+            <h2>Módulo de Urgencias y Triage Médico</h2>
+            <p>Monitoreo en tiempo real de pacientes ingresados por el área de emergencias bajo clasificación internacional de gravedad.</p>
             
             <div class="table-responsive">
                 <table>
@@ -74,16 +70,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="id-sector">URG_01</td><td>Manuel Espinoza</td><td>Traumatismo severo</td><td>5 min</td><td><span class="triage triage-rojo">Crítico (Rojo)</span></td></tr>
-                        <tr><td class="id-sector">URG_02</td><td>Karla Benítez</td><td>Dolor torácico agudo</td><td>12 min</td><td><span class="triage triage-rojo">Crítico (Rojo)</span></td></tr>
-                        <tr><td class="id-sector">URG_03</td><td>Esteban Quito</td><td>Sospecha de apendicitis</td><td>25 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
-                        <tr><td class="id-sector">URG_04</td><td>Sofía Loren</td><td>Crisis asmática severa</td><td>18 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
-                        <tr><td class="id-sector">URG_05</td><td>Héctor Lavoe</td><td>Fractura expuesta menor</td><td>40 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
-                        <tr><td class="id-sector">URG_06</td><td>Guillermo Toro</td><td>Pico febril descontrolado</td><td>30 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
-                        <tr><td class="id-sector">URG_07</td><td>Rebeca Linares</td><td>Quemadura de 2do grado</td><td>35 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
-                        <tr><td class="id-sector">URG_08</td><td>Christian Nodal</td><td>Intoxicación alimentaria</td><td>45 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
-                        <tr><td class="id-sector">URG_09</td><td>Aracely Arámbula</td><td>Crisis hipertensiva</td><td>15 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
-                        <tr><td class="id-sector">URG_10</td><td>Luis Miguel Gallego</td><td>Contusión por caída</td><td>50 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                        <tr><td class="id-sector">URG_01</td><td>Manuel Espinoza</td><td>Traumatismo severo</td><td>5 min</td><td>Crítico (Rojo)</td></tr>
+                        <tr><td class="id-sector">URG_02</td><td>Karla Benítez</td><td>Dolor torácico agudo</td><td>12 min</td><td>Crítico (Rojo)</td></tr>
+                        <tr><td class="id-sector">URG_03</td><td>Esteban Quito</td><td>Sospecha de apendicitis</td><td>25 min</td><td>Grave (Naranja)</td></tr>
+                        <tr><td class="id-sector">URG_04</td><td>Sofía Loren</td><td>Crisis asmática severa</td><td>18 min</td><td>Grave (Naranja)</td></tr>
+                        <tr><td class="id-sector">URG_05</td><td>Héctor Lavoe</td><td>Fractura expuesta menor</td><td>40 min</td><td>Moderado (Amarillo)</td></tr>
+                        <tr><td class="id-sector">URG_06</td><td>Guillermo Toro</td><td>Pico febril descontrolado</td><td>30 min</td><td>Moderado (Amarillo)</td></tr>
+                        <tr><td class="id-sector">URG_07</td><td>Rebeca Linares</td><td>Quemadura de 2do grado</td><td>35 min</td><td>Moderado (Amarillo)</td></tr>
+                        <tr><td class="id-sector">URG_08</td><td>Christian Nodal</td><td>Intoxicación alimentaria</td><td>45 min</td><td>Moderado (Amarillo)</td></tr>
+                        <tr><td class="id-sector">URG_09</td><td>Aracely Arámbula</td><td>Crisis hipertensiva</td><td>15 min</td><td>Grave (Naranja)</td></tr>
+                        <tr><td class="id-sector">URG_10</td><td>Luis Miguel Gallego</td><td>Contusión por caída</td><td>50 min</td><td>Moderado (Amarillo)</td></tr>
                     </tbody>
                 </table>
             </div>
