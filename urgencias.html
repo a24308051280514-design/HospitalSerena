@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Serena - Urgencias</title>
+    <style>
+        :root { --verde-lima: #9acd32; --azul-primario: #1e4d6b; --azul-claro: #f0f7f9; --gris-oscuro: #2b2d42; --gris-claro: #f8f9fa; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; border-radius: 0 !important; }
+        body { background-color: var(--gris-claro); color: var(--gris-oscuro); display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background-color: var(--verde-lima); position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0 2px 12px rgba(0,0,0,0.1); z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 15px 20px; }
+        .logo { font-size: 26px; font-weight: 700; color: var(--azul-primario); }
+        .logo span { color: var(--blanco); font-weight: 400; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--azul-primario); font-weight: 600; font-size: 15px; }
+        nav a:hover, nav a.active { color: var(--blanco); }
+
+        .cuerpo { flex: 1; max-width: 1200px; width: 100%; margin: 140px auto 40px auto; padding: 0 20px; }
+        .document-section { background-color: var(--blanco); padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; }
+        .document-section h2 { color: var(--azul-primario); margin-bottom: 10px; }
+        .document-section p { color: #70757a; margin-bottom: 25px; }
+
+        .table-responsive { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; border: 1px solid #e9ecef; }
+        th, td { padding: 14px 18px; border-bottom: 1px solid #e9ecef; }
+        th { background-color: var(--azul-claro); color: var(--azul-primario); font-weight: 600; border-bottom: 2px solid #cbd5e1; }
+        tr:hover { background-color: #fdfefe; }
+        
+        .id-sector { font-family: 'Courier New', monospace; color: #1e4d6b; font-weight: bold; font-size: 14px; }
+        .triage { padding: 6px 12px; font-size: 12px; font-weight: 600; border: 1px solid rgba(0,0,0,0.05); display: inline-block; color: #fff; }
+        .triage-rojo { background-color: #d90429; }
+        .triage-naranja { background-color: #f77f00; }
+        .triage-amarillo { background-color: #fcbf49; color: #000; }
+        
+        footer { background-color: var(--azul-primario); color: var(--blanco); padding: 40px 20px; font-size: 15px; width: 100%; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 15px; }
+        .datos-alumno { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">Hospital <span>Serena</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pacientes.html">Pacientes</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="citas.html">Citas</a></li>
+                    <li><a href="urgencias.html" class="active">Urgencias</a></li>
+                    <li><a href="farmacia.html">Farmacia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cuerpo">
+        <section class="document-section">
+            <h2>Módulo de Urgencias</h2>
+            <p>Monitoreo de pacientes ingresados de emergencias clasificados por gravedad.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id_urgencias</th>
+                            <th>Paciente</th>
+                            <th>Motivo de Ingreso</th>
+                            <th>Tiempo Espera</th>
+                            <th>Prioridad (Triage)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="id-sector">URG_01</td><td>Manuel Espinoza</td><td>Traumatismo severo</td><td>5 min</td><td><span class="triage triage-rojo">Crítico (Rojo)</span></td></tr>
+                        <tr><td class="id-sector">URG_02</td><td>Karla Benítez</td><td>Dolor torácico agudo</td><td>12 min</td><td><span class="triage triage-rojo">Crítico (Rojo)</span></td></tr>
+                        <tr><td class="id-sector">URG_03</td><td>Esteban Quito</td><td>Sospecha de apendicitis</td><td>25 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
+                        <tr><td class="id-sector">URG_04</td><td>Sofía Loren</td><td>Crisis asmática severa</td><td>18 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
+                        <tr><td class="id-sector">URG_05</td><td>Héctor Lavoe</td><td>Fractura expuesta menor</td><td>40 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                        <tr><td class="id-sector">URG_06</td><td>Guillermo Toro</td><td>Pico febril descontrolado</td><td>30 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                        <tr><td class="id-sector">URG_07</td><td>Rebeca Linares</td><td>Quemadura de 2do grado</td><td>35 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                        <tr><td class="id-sector">URG_08</td><td>Christian Nodal</td><td>Intoxicación alimentaria</td><td>45 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                        <tr><td class="id-sector">URG_09</td><td>Aracely Arámbula</td><td>Crisis hipertensiva</td><td>15 min</td><td><span class="triage triage-naranja">Grave (Naranja)</span></td></tr>
+                        <tr><td class="id-sector">URG_10</td><td>Luis Miguel Gallego</td><td>Contusión por caída</td><td>50 min</td><td><span class="triage triage-amarillo">Moderado (Amarillo)</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="datos-alumno">
+                <span><strong>Alumno:</strong> Burciaga Burciaga Isaac Felipe</span>
+                <span><strong>No. Control:</strong> 24308051280514</span>
+                <span><strong>Grado y Grupo:</strong> 4ºI</span>
+                <span><strong>Especialidad:</strong> Programación</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

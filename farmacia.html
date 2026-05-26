@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Serena - Farmacia</title>
+    <style>
+        :root { --verde-lima: #9acd32; --azul-primario: #1e4d6b; --azul-claro: #f0f7f9; --gris-oscuro: #2b2d42; --gris-claro: #f8f9fa; --blanco: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; border-radius: 0 !important; }
+        body { background-color: var(--gris-claro); color: var(--gris-oscuro); display: flex; flex-direction: column; min-height: 100vh; }
+        
+        header { background-color: var(--verde-lima); position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0 2px 12px rgba(0,0,0,0.1); z-index: 1000; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 15px 20px; }
+        .logo { font-size: 26px; font-weight: 700; color: var(--azul-primario); }
+        .logo span { color: var(--blanco); font-weight: 400; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--azul-primario); font-weight: 600; font-size: 15px; }
+        nav a:hover, nav a.active { color: var(--blanco); }
+
+        .cuerpo { flex: 1; max-width: 1200px; width: 100%; margin: 140px auto 40px auto; padding: 0 20px; }
+        .document-section { background-color: var(--blanco); padding: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #e2e8f0; }
+        .document-section h2 { color: var(--azul-primario); margin-bottom: 10px; }
+        .document-section p { color: #70757a; margin-bottom: 25px; }
+
+        .table-responsive { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; border: 1px solid #e9ecef; }
+        th, td { padding: 14px 18px; border-bottom: 1px solid #e9ecef; }
+        th { background-color: var(--azul-claro); color: var(--azul-primario); font-weight: 600; border-bottom: 2px solid #cbd5e1; }
+        tr:hover { background-color: #fdfefe; }
+        
+        .id-sector { font-family: 'Courier New', monospace; color: #1e4d6b; font-weight: bold; font-size: 14px; }
+        .stock { font-weight: 600; color: #2a9d8f; }
+        .stock-bajo { color: #e63946; }
+        
+        footer { background-color: var(--azul-primario); color: var(--blanco); padding: 40px 20px; font-size: 15px; width: 100%; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 15px; }
+        .datos-alumno { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">Hospital <span>Serena</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pacientes.html">Pacientes</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="citas.html">Citas</a></li>
+                    <li><a href="urgencias.html">Urgencias</a></li>
+                    <li><a href="farmacia.html" class="active">Farmacia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cuerpo">
+        <section class="document-section">
+            <h2>Inventario de Farmacia</h2>
+            <p>Monitoreo de stock de medicamentos.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id_farmacia</th>
+                            <th>Medicamento / Compuesto</th>
+                            <th>Categoría</th>
+                            <th>Lote</th>
+                            <th>Existencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="id-sector">FAR_01</td><td>Paracetamol IV 1g</td><td>Analgésico</td><td>LOT-2026A</td><td class="stock">450 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_02</td><td>Propofol 200mg/20ml</td><td>Anestésico</td><td>LOT-9912B</td><td class="stock stock-bajo">15 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_03</td><td>Insulina Glargina</td><td>Hipoglucemiante</td><td>LOT-4412C</td><td class="stock">120 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_04</td><td>Amoxicilina Clavulanato</td><td>Antibiótico</td><td>LOT-8831A</td><td class="stock">300 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_05</td><td>Epinefrina 1mg/ml</td><td>Cardiotónico</td><td>LOT-1022X</td><td class="stock">85 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_06</td><td>Ketorolaco 30mg</td><td>Analgesia Intensa</td><td>LOT-5512K</td><td class="stock">500 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_07</td><td>Diazepam 10mg/2ml</td><td>Controlado</td><td>LOT-3011D</td><td class="stock stock-bajo">8 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_08</td><td>Salbutamol Aerosol</td><td>Broncodilatador</td><td>Adul-4411</td><td class="stock">210 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_09</td><td>Omeprazol IV 40mg</td><td>Protector Gástrico</td><td>LOT-6622O</td><td class="stock">600 pzas</td></tr>
+                        <tr><td class="id-sector">FAR_10</td><td>Losartán Potásico 50mg</td><td>Antihipertensivo</td><td>LOT-7711L</td><td class="stock">350 pzas</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="datos-alumno">
+                <span><strong>Alumno:</strong> Burciaga Burciaga Isaac Felipe</span>
+                <span><strong>No. Control:</strong> 24308051280514</span>
+                <span><strong>Grado y Grupo:</strong> 4ºI</span>
+                <span><strong>Especialidad:</strong> Programación</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
